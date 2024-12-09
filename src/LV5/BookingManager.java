@@ -5,11 +5,12 @@ import java.util.List;
 
 public class BookingManager {
 
-    private List<Seat> seat_list = new ArrayList<>();
+    private List<Seat> seat_list;
     private List<String> want_booking_list;
 
-    public BookingManager(List<String> want_booking_list) {
+    public BookingManager(List<Seat> seat_list,List<String> want_booking_list) {
         this.want_booking_list = want_booking_list;
+        this.seat_list = seat_list;
     }
 
     public void bookSeat() {
